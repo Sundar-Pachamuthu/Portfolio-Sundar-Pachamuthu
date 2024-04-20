@@ -183,7 +183,8 @@ html{
     line-height: 30px;
     position: relative;
 }
-.first-half .button{
+.first-half .button,
+.about .button{
     position: relative;
 }
 .button{
@@ -236,6 +237,7 @@ html{
     text-shadow: 2px 2px 15px black;
 }
 .social-icons{
+    position: relative;
     display: flex;
     width: 50%;
     margin-top: 30px;
@@ -281,6 +283,7 @@ html{
     color: var(--main-text-color);
 }
 .about-img-container{
+    position: relative;
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -322,6 +325,7 @@ html{
 .about p{
     padding: 0% 9%;
     font-size: 1.5rem;
+    position: relative;
 }
 .about .button{
     width: 500px;
@@ -501,12 +505,12 @@ html{
 }
 .header-name .animate,
 .nav a .animate,
-.home .show-animate.animate,
-.home p .animate,
-.first-half .button .animate,
-.first-half .social-icons a .animate{
-    animation: animationgraplate 1s ease forwards;
-    animation-delay: calc(0.5s * var(--i));
+.show-animate .animate,
+.show-animate .first-half p .animate,
+.show-animate .first-half .button .animate,
+ .show-animate .first-half .social-icons .animate{
+    animation: animationgraplate 1.5s ease forwards;
+    animation-delay: calc(0.4s * var(--i));
 }
 @keyframes animationgraplate{
     0%{
