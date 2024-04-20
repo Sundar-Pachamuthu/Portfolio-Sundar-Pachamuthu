@@ -38,6 +38,7 @@ html{
     left: 0;
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 20px 5% ;
     justify-content: space-between;
     z-index: 100;
@@ -74,7 +75,6 @@ html{
 .active{
     background-color: var(--bg-color);
     border-radius: 30px;
-    transition: .4s;
     transition: .6s;
     width: 90%;
     color: var(--main-text-color);
@@ -87,17 +87,20 @@ html{
     display: none;
 }
 .home{
-    min-height: 80vh;
+    width: 100%;
+    min-height: 50vh;
     display: flex;
-    align-items: center;
-    padding: 0px 5%;
+    padding: 0px 9%;
 }
 .first-half{
-    width: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
     /* background-color: #fff; */
 }
 .first-half h1{
     position: relative;
+    /* background-color: #fff; */
 }
 .home h1{
     font-size: 5.4rem;
@@ -182,6 +185,8 @@ html{
     font-size: 1.7rem;
     line-height: 30px;
     position: relative;
+    text-align: justify;
+
 }
 .first-half .button,
 .about .button{
@@ -201,7 +206,7 @@ html{
     background-color: var(--main-text-color);
     padding: 10px;
     font-size: 2rem;
-    width: 40%;
+    width: 45%;
     position: relative;
     color: var(--sec-bg-color);
     border: 3px solid var(--main-text-color);
@@ -325,6 +330,7 @@ html{
 .about p{
     padding: 0% 9%;
     font-size: 1.5rem;
+    text-align: justify;
     position: relative;
 }
 .about .button{
@@ -515,6 +521,8 @@ html{
 @keyframes animationgraplate{
     0%{
         width: 100%;
+        text-shadow: none;
+        box-shadow: none;
     }
     100%{
         width: 0%;
@@ -524,6 +532,10 @@ html{
     0%,
     50%{
         opacity: 0;
+        text-shadow: none;
+        box-shadow: none;
+
+
     }
     100%{
         opacity: 1;
@@ -551,8 +563,17 @@ html{
 
 
 /* MEDIA QUERY */
+@media (max-width: 1450px){
+    .home .first-half h1{
+        font-size: 4rem;
+    }
+    .animation-text{
+        font-size: 2.5rem;
+    }
+}
 
-@media(max-width: 880px){
+
+@media (max-width: 1000px){
     .header{
         width: 100%;
     }
@@ -581,17 +602,106 @@ html{
     .header{
         flex-wrap: wrap;
     }
+    .button a{
+        font-size: 1.7rem;
+    }
+    .first-half h1{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        font-size: 5rem !important;
+    }
+    .animation-text{
+        text-align: center;
+    }
+    .animation-text h2::before{
+        animation: none;
+        border: none;
+    }
 
+}
+
+@media(max-width: 880px){
+    .first-half {
+        width: 100% ;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 700px){
+    .first-half h1{
+        font-size: 4rem !important;
+        gap: 50px;
+    }
+    .animation-text{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .button a{
+        font-size: .8rem;
+    }
+    .first-half h1{
+        font-size: 3rem !important;
+        gap: 30px;
+    }
+    .animation-text{
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 500px){
     .header{
         width: 100%;
+        position: fixed;
+    }
+    .header-name img{
+        width: 3rem;
+        margin-right: 5px;
+    }
+    .first-half{
+        width: 100%;
+        margin-top: 90px;
     }
     .first-half h1{
-        font-size: 1rem;
+       font-size: 2.5rem !important;
+       text-align: center;
+    }
+    .first-half h1 span{
+        width: 100% !important;
+        font-size: 2.5rem !important;
+        padding-top: 0px;
     }
     .animation-text{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+    .first-half p{
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .button a{
+        font-size: .5rem !important;
+        text-align: center;
+    }
+    .social-icons i{
+        font-size: 2rem;
+    }
+    .about-img-container{
+        width: 20rem;
+    }
+    .img-spin{
+        border: none ;
+    }
+    .about p{
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    
+   
 }
