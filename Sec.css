@@ -94,15 +94,14 @@ html{
     padding: 0px 9%;
 }
 .first-half{
-    position: relative;
     width: 90%;
     display: flex;
     flex-direction: column;
     /* background-color: #fff; */
 }
 .first-half h1{
-    /* background-color: #fff; */
     position: relative;
+    /* background-color: #fff; */
 }
 .home h1{
     font-size: 5.4rem;
@@ -183,7 +182,7 @@ html{
         opacity: 0;
     }
 }
-.first-half p{
+.home p{
     font-size: 1.7rem;
     line-height: 30px;
     position: relative;
@@ -195,7 +194,6 @@ html{
     position: relative;
 }
 .button{
-    position: relative;
     display: flex;
     width: 50%;
     justify-content: space-between;
@@ -463,6 +461,8 @@ html{
     width: 100%;
     transition: .6s;
 }
+
+
 .skills-languages{
     width: 90%;
     display: flex;
@@ -488,7 +488,7 @@ html{
     background-color: var(--main-text-color);
 }
 .react .skills-known::before{
-    width: 85%;
+ width: 85%;
 }
 .boot .skills-known::before{
     width: 70%;
@@ -521,27 +521,6 @@ html{
     width: 100%;
     height: 60px;
 }
-footer{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 15px 10%;
-    justify-content: center;
-    gap: 50px;
-    position: relative;
-    margin-top: 3rem;
-    background-color: var(--sec-bg-color);
-    font-size: 1.5rem;
-}
-.bi-arrow-up-square{
-    font-size: 2rem;
-    color: #000;
-    background: transparent !important;
-    background-color: transparent !important;
-    padding: 10px;
-    border-radius: 25%;
-    background: transparent;
-}
 
 
 
@@ -566,14 +545,15 @@ footer{
 .show-animate .first-half .animate,
 .show-animate .first-half p .animate,
 .show-animate .first-half .button .animate,
-.show-animate .first-half .social-icons .animate,
-footer .animate{
+.show-animate .first-half .social-icons .animate{
     animation: animationgraplate 1.5s ease forwards;
     animation-delay: calc(0.4s * var(--i));
 }
 @keyframes animationgraplate{
     0%{
         width: 100%;
+        text-shadow: none;
+        box-shadow: none;
     }
     100%{
         width: 0%;
@@ -583,6 +563,8 @@ footer .animate{
     0%,
     50%{
         opacity: 0;
+        text-shadow: none;
+        box-shadow: none;
     }
     100%{
         opacity: 1;
