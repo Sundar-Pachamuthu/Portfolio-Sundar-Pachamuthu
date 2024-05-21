@@ -95,7 +95,7 @@ html{
 }
 .first-half{
     position: relative;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     /* background-color: #fff; */
@@ -272,6 +272,39 @@ html{
     color: var(--main-text-color);
     transition: .6s;
 }
+.notify{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: var(--text-color);
+    padding: 10px;
+    width: 40%;
+    top: 77px;
+    left: 30%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px var(--main-text-color);
+    z-index: 101;
+    color: var(--main-text-color);
+}
+.notify .bi-x{
+    color: black;
+}
+.notify.display{
+    display: flex;
+    animation: notify 2s linear;
+}
+@keyframes notify{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 .about{
     display: flex;
     align-items: center;
@@ -405,7 +438,7 @@ html{
 }
 .content-container p{
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
                     /* SKILLS */
@@ -542,7 +575,22 @@ footer{
     border-radius: 25%;
     background: transparent;
 }
-
+.provid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.provid video{
+    width: 50%;
+    border-radius: 10px;
+}
+.provid h2{
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+}
 
 
 

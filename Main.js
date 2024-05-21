@@ -5,6 +5,19 @@ menuIcon.onclick = ()=>{
     navbar.classList.toggle('flex')
 }
 
+
+//            NOTIFY DISPLAY
+// let instagram = document.getElementById('insta');
+// let notify = document.getElementById('notify');
+// let x = document.getElementById('x');
+// instagram.onclick = ()=>{
+//     notify.classList.toggle('display');
+// }
+// x.onclick= ()=>{
+//     notify.classList.remove('display');
+// }
+
+
 window.onscroll= ()=>{
     let sections = document.querySelectorAll('section');
     let navLinks =  document.querySelectorAll('Header nav a');
